@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Larry's Body Shop — Collision &amp; Auto Body Repair, Griffith, IN</title>
+<meta name="description" content="Larry's Body Shop on E Main St in Griffith, Indiana. Collision repair, dent and frame work, paint matching, and insurance claim repairs. Call (219) 924-5002 for a free estimate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --char:#141618;
+  --char-2:#1d2023;
+  --steel:#2b2f33;
+  --primer:#9aa0a6;
+  --chalk:#e9e7e2;
+  --orange:#ff5b1f;
+  --orange-d:#d94810;
+  --line:rgba(233,231,226,.14);
+  --head:"Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
+  --body:"Inter", system-ui, -apple-system, Segoe UI, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--char);
+  color:var(--chalk);
+  font-family:var(--body);
+  font-size:1.0625rem;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+/* grain */
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.07;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.wrap{width:min(1240px,100% - 2.5rem);margin-inline:auto}
+.skip{position:absolute;left:-999px;top:0;background:var(--orange);color:#111;padding:.6rem 1rem;z-index:200}
+.skip:focus{left:1rem;top:1rem}
+
+/* top bar */
+header.bar{
+  position:sticky;top:0;z-index:50;
+  background:rgba(20,22,24,.92);backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.8rem}
+.logo{display:flex;align-items:center;gap:.65rem;text-decoration:none}
+.logo b{font-family:var(--head);font-weight:900;font-size:1.55rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.logo small{display:block;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--primer)}
+.bar nav{display:none;gap:1.8rem;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+.bar nav a{text-decoration:none;color:var(--primer);transition:color .2s}
+.bar nav a:hover{color:var(--chalk)}
+.call-sm{
+  font-family:var(--head);font-weight:800;font-size:1.15rem;letter-spacing:.04em;
+  background:var(--orange);color:#111;text-decoration:none;padding:.45rem .9rem;white-space:nowrap;
+}
+.call-sm:hover{background:var(--chalk)}
+
+/* hero */
+.hero{position:relative;padding:3.5rem 0 0;border-bottom:1px solid var(--line);overflow:hidden}
+.hero::after{ /* hazard stripe */
+  content:"";display:block;height:14px;margin-top:3rem;
+  background:repeating-linear-gradient(-45deg,var(--orange) 0 18px,var(--char) 18px 36px);
+}
+.eyebrow{
+  font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--primer);
+  display:flex;align-items:center;gap:.7rem;
+}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--orange)}
+.big-stat{
+  font-family:var(--head);font-weight:900;line-height:.78;letter-spacing:-.02em;
+  font-size:clamp(9rem,42vw,30rem);
+  margin:1.2rem 0 0;display:flex;align-items:flex-start;gap:.04em;
+  color:var(--chalk);
+}
+.big-stat .star{
+  color:var(--orange);font-size:.42em;line-height:1;margin-top:.12em;
+  display:inline-block;transform-origin:center;
+}
+.stat-row{display:grid;gap:2rem;margin-top:1.8rem}
+.stat-cap{
+  font-family:var(--head);font-weight:800;text-transform:uppercase;
+  font-size:clamp(1.9rem,5.4vw,3.6rem);line-height:.95;letter-spacing:.01em;max-width:16ch;
+}
+.stat-cap em{font-style:normal;color:var(--orange)}
+.stat-meta{color:var(--primer);font-size:.95rem;max-width:42ch}
+.stat-meta strong{color:var(--chalk);font-weight:600}
+.cta-row{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.4rem}
+.btn{
+  display:inline-flex;align-items:center;gap:.6rem;text-decoration:none;
+  font-family:var(--head);font-weight:800;text-transform:uppercase;letter-spacing:.05em;
+  font-size:1.3rem;padding:.85rem 1.4rem;border:2px solid var(--orange);
+  transition:background .2s,color .2s,transform .2s;
+}
+.btn-solid{background:var(--orange);color:#111}
+.btn-solid:hover{background:var(--chalk);border-color:var(--chalk);transform:translateY(-2px)}
+.btn-ghost{color:var(--chalk);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--chalk)}
+.stamp{
+  position:absolute;right:-2rem;top:5rem;width:180px;opacity:.9;transform:rotate(-12deg);
+  display:none;
+}
+
+/* plate strip */
+.plates{border-bottom:1px solid var(--line);background:var(--char-2)}
+.plates ul{list-style:none;display:grid;grid-template-columns:1fr 1fr}
+.plates li{padding:1.3rem 1rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.plates li span{display:block;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--primer)}
+.plates li b{font-family:var(--head);font-weight:800;font-size:1.6rem;text-transform:uppercase;letter-spacing:.02em}
+
+/* section heads */
+section{scroll-margin-top:70px}
+.sec{padding:5.5rem 0}
+.sec-head{display:grid;gap:1rem;margin-bottom:3rem}
+.sec-num{font-family:var(--head);font-weight:900;font-size:1rem;letter-spacing:.2em;color:var(--orange)}
+h2{
+  font-family:var(--head);font-weight:900;text-transform:uppercase;line-height:.88;
+  font-size:clamp(3rem,10vw,7rem);letter-spacing:-.005em;
+}
+h2 .dim{color:var(--steel);-webkit-text-stroke:1px var(--primer)}
+.lede{color:var(--primer);max-width:52ch;font-size:1.08rem}
+
+/* work order services */
+.order{border:1px solid var(--line);background:var(--char-2)}
+.order-top{
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;
+  padding:.9rem 1.2rem;border-bottom:1px dashed var(--line);
+  font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--primer);
+}
+.job{
+  display:grid;grid-template-columns:3rem 1fr;gap:.4rem 1rem;align-items:baseline;
+  padding:1.6rem 1.2rem;border-bottom:1px solid var(--line);position:relative;
+  transition:background .25s;
+}
+.job:last-child{border-bottom:0}
+.job::before{content:"";position:absolute;left:0;top:0;bottom:0;width:0;background:var(--orange);transition:width .25s}
+.job:hover{background:var(--steel)}
+.job:hover::before{width:5px}
+.job .n{font-family:var(--head);font-weight:800;font-size:1.2rem;color:var(--orange)}
+.job h3{font-family:var(--head);font-weight:800;text-transform:uppercase;font-size:clamp(1.8rem,5vw,2.8rem);line-height:1;letter-spacing:.01em}
+.job p{grid-column:2;color:var(--primer);max-width:60ch}
+
+/* small shop */
+.shop{background:var(--chalk);color:var(--char)}
+.shop h2 .dim{color:transparent;-webkit-text-stroke:1.5px var(--char)}
+.shop .lede{color:#45494d}
+.shop-grid{display:grid;gap:2.5rem}
+.quote-block{
+  font-family:var(--head);font-weight:800;text-transform:uppercase;
+  font-size:clamp(2.2rem,6.5vw,4.4rem);line-height:.92;border-left:8px solid var(--orange);padding-left:1.2rem;
+}
+.points{list-style:none;display:grid;gap:0;border-top:2px solid var(--char)}
+.points li{padding:1.3rem 0;border-bottom:1px solid rgba(20,22,24,.2);display:grid;grid-template-columns:2.2rem 1fr;gap:.8rem}
+.points svg{width:26px;height:26px;margin-top:.2rem}
+.points b{display:block;font-family:var(--head);font-weight:800;font-size:1.5rem;text-transform:uppercase;line-height:1.05;letter-spacing:.01em}
+.points span{color:#45494d;font-size:.98rem}
+
+/* after accident steps */
+.steps{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);counter-reset:s}
+.step{background:var(--char);padding:2rem 1.4rem;position:relative;min-height:220px}
+.step::before{
+  counter-increment:s;content:"0" counter(s);
+  font-family:var(--head);font-weight:900;font-size:5rem;line-height:1;
+  color:transparent;-webkit-text-stroke:1px var(--primer);opacity:.55;display:block;margin-bottom:.8rem;
+  transition:color .25s,opacity .25s;
+}
+.step:hover::before{color:var(--orange);-webkit-text-stroke:0;opacity:1}
+.step h3{font-family:var(--head);font-weight:800;text-transform:uppercase;font-size:1.7rem;line-height:1;margin-bottom:.5rem}
+.step p{color:var(--primer);font-size:.96rem}
+
+/* contact */
+.visit{background:var(--orange);color:#111;position:relative;overflow:hidden}
+.visit h2{color:#111}
+.visit-grid{display:grid;gap:2.5rem;align-items:end}
+.phone-big{
+  display:block;text-decoration:none;font-family:var(--head);font-weight:900;
+  font-size:clamp(3.4rem,13vw,9.5rem);line-height:.85;letter-spacing:-.01em;margin-top:1rem;
+  transition:color .2s;
+}
+.phone-big:hover{color:var(--chalk)}
+.card{background:var(--char);color:var(--chalk);padding:1.8rem 1.6rem;border-top:6px solid #111}
+.card dl{display:grid;gap:1.2rem}
+.card dt{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--primer)}
+.card dd{font-family:var(--head);font-weight:800;font-size:1.6rem;text-transform:uppercase;line-height:1.1;letter-spacing:.01em}
+.card dd a{text-decoration:none;border-bottom:2px solid var(--orange)}
+.card dd a:hover{color:var(--orange)}
+.card .btn{margin-top:1.6rem;width:100%;justify-content:center}
+.visit-note{max-width:44ch;font-weight:500;margin-top:1.2rem}
+
+footer{padding:2.5rem 0;border-top:1px solid var(--line);font-size:.85rem;color:var(--primer)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between}
+footer .credit{opacity:.6;font-size:.78rem}
+
+/* reveals */
+@media (prefers-reduced-motion:no-preference){
+  .big-stat .star{animation:spin-in 1.2s cubic-bezier(.2,.8,.2,1) both .2s}
+  @keyframes spin-in{from{transform:rotate(-180deg) scale(.2);opacity:0}to{transform:none;opacity:1}}
+  .big-stat .num{animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
+  @keyframes rise{from{transform:translateY(18%);opacity:0}to{transform:none;opacity:1}}
+  @supports (animation-timeline:view()){
+    .reveal{animation:up linear both;animation-timeline:view();animation-range:entry 0% entry 40%}
+    @keyframes up{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+  }
+}
+
+@media (min-width:720px){
+  .plates ul{grid-template-columns:repeat(4,1fr)}
+  .plates li{border-bottom:0}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .stamp{display:block}
+}
+@media (min-width:980px){
+  .bar nav{display:flex}
+  .hero{padding-top:4.5rem}
+  .stat-row{grid-template-columns:1.2fr 1fr;align-items:end}
+  .sec-head{grid-template-columns:1fr 1fr;align-items:end}
+  .job{grid-template-columns:5rem 1fr 1.1fr;padding:2rem 1.8rem}
+  .job p{grid-column:3}
+  .shop-grid{grid-template-columns:1fr 1fr;gap:5rem}
+  .steps{grid-template-columns:repeat(4,1fr)}
+  .visit-grid{grid-template-columns:1.4fr 1fr}
+  .stamp{right:4%;top:6rem;width:220px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Larry's Body Shop home">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect x="1" y="1" width="32" height="32" fill="none" stroke="#ff5b1f" stroke-width="2"/><path d="M9 8v18h10" stroke="#e9e7e2" stroke-width="3.5" fill="none" stroke-linecap="square"/><circle cx="24" cy="24" r="2.5" fill="#ff5b1f"/></svg>
+      <span><b>Larry's</b><small>Body Shop · Griffith</small></span>
+    </a>
+    <nav aria-label="Primary">
+      <a href="#work">The Work</a>
+      <a href="#shop">The Shop</a>
+      <a href="#after">After a Wreck</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a class="call-sm" href="tel:+12199245002">(219) 924-5002</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="hero-h">
+    <svg class="stamp" viewBox="0 0 200 200" aria-hidden="true">
+      <defs><path id="c" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+      <circle cx="100" cy="100" r="96" fill="none" stroke="#ff5b1f" stroke-width="3"/>
+      <circle cx="100" cy="100" r="62" fill="none" stroke="#ff5b1f" stroke-width="1.5"/>
+      <text font-family="Big Shoulders Display, sans-serif" font-weight="800" font-size="17" letter-spacing="5" fill="#ff5b1f"><textPath href="#c">501 E MAIN ST · GRIFFITH IN · FREE ESTIMATES ·</textPath></text>
+      <text x="100" y="112" text-anchor="middle" font-family="Big Shoulders Display, sans-serif" font-weight="900" font-size="34" fill="#ff5b1f">EST.</text>
+    </svg>
+    <div class="wrap">
+      <p class="eyebrow">Collision &amp; Auto Body · Griffith, Indiana</p>
+      <h1 id="hero-h" class="big-stat" aria-label="Rated 5.0 stars">
+        <span class="num">5.0</span><span class="star" aria-hidden="true">★</span>
+      </h1>
+      <div class="stat-row">
+        <p class="stat-cap">From real <em>Griffith</em> customers. Not ad money.</p>
+        <div>
+          <p class="stat-meta"><strong>A perfect 5.0 across every Google review we've got (7 and counting).</strong> No ad budget, no franchise sign — just neighbors telling neighbors where to take the car after a bad day.</p>
+          <div class="cta-row">
+            <a class="btn btn-solid" href="tel:+12199245002">
+              <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+              Call for a free estimate
+            </a>
+            <a class="btn btn-ghost" href="#visit">Find the shop</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="plates" aria-label="Shop at a glance">
+    <ul class="wrap">
+      <li><span>Rating</span><b>5.0 / 5.0</b></li>
+      <li><span>Location</span><b>501 E Main St</b></li>
+      <li><span>Estimates</span><b>Free</b></li>
+      <li><span>Who you talk to</span><b>The guys doing it</b></li>
+    </ul>
+  </div>
+
+  <section class="sec" id="work" aria-labelledby="work-h">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <p class="sec-num">01 / The Work</p>
+          <h2 id="work-h">What we <span class="dim">fix.</span></h2>
+        </div>
+        <p class="lede">Think of this as the repair order. Bring it in, we look it over with you, and you get a straight answer on what it needs — before anything gets touched.</p>
+      </div>
+
+      <div class="order reveal">
+        <div class="order-top"><span>Repair Order · Larry's Body Shop</span><span>Griffith, IN 46319</span></div>
+        <article class="job">
+          <span class="n">01</span>
+          <h3>Collision Repair</h3>
+          <p>Fender-benders to the ones that ruin your week. We put the panels, bumpers, and body lines back where they belong.</p>
+        </article>
+        <article class="job">
+          <span class="n">02</span>
+          <h3>Dent &amp; Frame Work</h3>
+          <p>Dings, creases, and the deeper stuff underneath. Body and frame damage straightened out so the car drives and looks right.</p>
+        </article>
+        <article class="job">
+          <span class="n">03</span>
+          <h3>Paint Matching &amp; Refinish</h3>
+          <p>The part people notice. Color matched and finished so the repaired panel disappears into the rest of the car — that's where the detail shows.</p>
+        </article>
+        <article class="job">
+          <span class="n">04</span>
+          <h3>Insurance Claim Repairs</h3>
+          <p>Already filed a claim? Bring the paperwork. We do insurance repair work and can walk you through what happens next.</p>
+        </article>
+        <article class="job">
+          <span class="n">05</span>
+          <h3>Body Restoration</h3>
+          <p>Rust, wear, years of parking lots. General body restoration for the car you're not ready to give up on.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec shop" id="shop" aria-labelledby="shop-h">
+    <div class="wrap shop-grid">
+      <div class="reveal">
+        <p class="sec-num">02 / The Shop</p>
+        <h2 id="shop-h">Small shop. <span class="dim">Big standards.</span></h2>
+        <p class="lede" style="margin-top:1.4rem">Larry's isn't a chain and doesn't act like one. It's a local body shop on Main Street, and the reputation was built the old way — one repaired car, one satisfied driver at a time.</p>
+        <p class="quote-block" style="margin-top:2.5rem">You deal with the people doing the work.</p>
+      </div>
+      <ul class="points reveal">
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6" fill="none" stroke="#ff5b1f" stroke-width="3" stroke-linecap="square"/></svg>
+          <div><b>Personal accountability</b><span>No call center, no handoff. The person you talk to at the counter is part of the crew fixing your car.</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6" fill="none" stroke="#ff5b1f" stroke-width="3" stroke-linecap="square"/></svg>
+          <div><b>Detail on the finish</b><span>Paint and finish work done carefully, because a repair should be invisible when you drive away.</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6" fill="none" stroke="#ff5b1f" stroke-width="3" stroke-linecap="square"/></svg>
+          <div><b>Neighbor-recommended</b><span>Every review so far is five stars. That's word of mouth from Griffith and Lake County drivers — not marketing.</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6" fill="none" stroke="#ff5b1f" stroke-width="3" stroke-linecap="square"/></svg>
+          <div><b>Right here on Main</b><span>A real, local shop at 501 E Main St you can drive up to, walk into, and get a look at.</span></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="after" aria-labelledby="after-h">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <p class="sec-num">03 / After a Wreck</p>
+          <h2 id="after-h">Had a bad day? <span class="dim">Start here.</span></h2>
+        </div>
+        <p class="lede">No runaround. Here's how it goes when you bring your car to Larry's.</p>
+      </div>
+      <ol class="steps reveal" role="list">
+        <li class="step">
+          <h3>Call or stop by</h3>
+          <p>Ring (219) 924-5002 or pull into the lot on E Main St. Tell us what happened.</p>
+        </li>
+        <li class="step">
+          <h3>Free estimate</h3>
+          <p>We look the damage over in person and give you a straight, no-cost estimate.</p>
+        </li>
+        <li class="step">
+          <h3>Insurance, sorted</h3>
+          <p>Going through a claim? Bring your info and we'll work the repair with it in mind.</p>
+        </li>
+        <li class="step">
+          <h3>Drive it home</h3>
+          <p>Body straight, paint matched, finish right. Then you get your car — and your week — back.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec visit" id="visit" aria-labelledby="visit-h">
+    <div class="wrap visit-grid">
+      <div class="reveal">
+        <p class="sec-num" style="color:#111">04 / Visit</p>
+        <h2 id="visit-h">Get a free estimate.</h2>
+        <a class="phone-big" href="tel:+12199245002">219·924·5002</a>
+        <p class="visit-note">Call ahead or just come by. Bring the car, bring your insurance info if you have a claim, and we'll take a look.</p>
+      </div>
+      <div class="card reveal">
+        <dl>
+          <div><dt>Shop</dt><dd>Larry's Body Shop</dd></div>
+          <div><dt>Address</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=Larry%27s+Body+Shop+501+E+Main+St+Griffith+IN+46319" target="_blank" rel="noopener">501 E Main St<br>Griffith, IN 46319</a></dd></div>
+          <div><dt>Phone</dt><dd><a href="tel:+12199245002">(219) 924-5002</a></dd></div>
+          <div><dt>Serving</dt><dd>Griffith &amp; Lake County, NWI</dd></div>
+        </dl>
+        <a class="btn btn-solid" href="https://www.google.com/maps/dir/?api=1&amp;destination=501+E+Main+St+Griffith+IN+46319" target="_blank" rel="noopener">Get directions →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Larry's Body Shop · 501 E Main St, Griffith, IN 46319 · (219) 924-5002</span>
+    <span class="credit">Website sample by Wild Card Creative Co</span>
+  </div>
+</footer>
+</body>
+</html>
